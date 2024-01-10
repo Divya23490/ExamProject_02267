@@ -8,8 +8,14 @@ import org.acme.service.TokenManagementServices;
 import java.util.List;
 
 @Path("/")
-public class GreetingResource {
+public class TokenResource {
 TokenManagementServices tokenManagementServices = new TokenManagementServices();
+    @Path("/tokens")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Token> getAllToken() {
+        return tokenManagementServices.getAllTokenLis();
+    }
     @Path("/token/generate")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

@@ -32,5 +32,6 @@ public class TokenManagementServices {
         return UUID.randomUUID().toString();
     }
 
+    public List<Token> getAllTokenLis() { return tokenList; }
 }
 
