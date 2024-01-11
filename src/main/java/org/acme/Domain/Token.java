@@ -4,14 +4,14 @@ package org.acme.Domain;
 import java.time.LocalDate;
 
 public class Token {
-    private int tokenID;
+    private String tokenID;
     private String token;
     private String tokenStatus;
     private LocalDate tokenCreateDate;
-    private int customerID;
+    private String customerID;
     private int tokenCount;
 
-    public Token(int tokenID, String token, String tokenStatus, LocalDate tokenCreateDate, int customerID) {
+    public Token(String tokenID, String token, String tokenStatus, LocalDate tokenCreateDate, String customerID) {
         this.tokenID = tokenID;
         this.token = token;
         this.tokenStatus = tokenStatus;
@@ -19,11 +19,11 @@ public class Token {
         this.customerID = customerID;
     }
 
-    public int getTokenID() {
+    public String getTokenID() {
         return tokenID;
     }
 
-    public void setTokenID(int tokenID) {
+    public void setTokenID(String tokenID) {
         this.tokenID = tokenID;
     }
 
@@ -51,20 +51,20 @@ public class Token {
         this.tokenCreateDate = tokenCreateDate;
     }
 
-    public int getCustomerID() {
+    public String getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(int customerID) {
+    public void setCustomerID(String customerID) {
         this.customerID = customerID;
     }
 
     public Token(){}
-    public Token(int customerID,int tokenCount) {
+    public Token(String customerID,int tokenCount) {
         this.customerID = customerID;
         this.tokenCount = tokenCount;
     }
-    public Token(int tokenID, String token, String tokenStatus) {
+    public Token(String tokenID, String token, String tokenStatus) {
         this.tokenID = tokenID;
         this.token = token;
         this.tokenStatus = tokenStatus;
