@@ -14,7 +14,7 @@ TokenManagementServices tokenManagementServices = new TokenManagementServices();
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Token> getAllToken() {
-        return tokenManagementServices.getAllTokenLis();
+        return tokenManagementServices.getAllTokenList();
     }
     @Path("/tokens/")
     @POST
